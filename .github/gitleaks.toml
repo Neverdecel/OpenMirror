@@ -1,0 +1,24 @@
+# Relit gitleaks configuration.
+# The project's core promise is that no secret shape ever lands in a
+# committed file. gitleaks enforces that on every push and pull request,
+# and a weekly job scans the full history.
+
+title = "Relit gitleaks configuration"
+
+[extend]
+useDefault = true
+
+# OpenCode MCP server definitions can carry bearer tokens inline, often
+# under labels that do not match gitleaks' generic keywords.
+[[rules]]
+id = "mcp-bearer-inline"
+description = "Bearer token inline in an MCP server definition"
+regex = '''(?i)(bearer|authorization)[\s"']*[:=][\s"']*[A-Za-z0-9._\-]{24,}'''
+keywords = ["bearer", "authorization"]
+
+[allowlist]
+paths = [
+  '''tests/fixtures/.+''',
+  '''\.github/gitleaks\.toml''',
+  '''\.gitleaks\.toml''',
+]

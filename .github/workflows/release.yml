@@ -1,0 +1,36 @@
+name: release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to release, e.g. 0.1.0"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: version must be semver
+        run: |
+          echo "${{ github.event.inputs.version }}" | grep -Eq '^[0-9]+\.[0-9]+\.[0-9]+$'
+          git tag "v${{ github.event.inputs.version }}"
+      - name: manifest must exist before the first release
+        run: |
+          if [[ ! -f relit.json ]]; then
+            echo "relit.json not found; the manifest floor lands with the CLI (ROADMAP.md v0.1)"
+          else
+            grep -q '"schemaVersion"' relit.json
+          fi
+
+      # TODO: when the CLI exists (ROADMAP.md v0.1), this step becomes the
+      # build matrix: compile for linux, macos, windows (WSL reuses linux),
+      # upload artifacts, attach to the GitHub release, draft the changelog.
+      - name: placeholder until the CLI exists
+        run: echo "Release pipeline is scaffolded; binaries land with the CLI"

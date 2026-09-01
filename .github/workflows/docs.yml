@@ -1,0 +1,27 @@
+name: docs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: markdownlint
+        run: npx --yes markdownlint-cli2 "**/*.md"
+      - name: markdown link check
+        run: |
+          find . -name '*.md' -print0 | while IFS= read -r -d '' f; do
+            npx --yes markdown-link-check -q "$f"
+          done
+      - name: contract checks
+        run: bash scripts/check-docs.sh

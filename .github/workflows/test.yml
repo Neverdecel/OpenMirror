@@ -1,0 +1,38 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: actionlint (workflow validation)
+        run: docker run --rm -v "$PWD:/repo" -w /repo rhysd/actionlint:latest -color
+      - name: shellcheck
+        run: docker run --rm -v "$PWD:/repo" -w /repo koalaman/shellcheck:stable scripts/check-docs.sh
+
+  # STUB. The CLI language is undecided (ROADMAP.md, "Decisions pending").
+  # When it is chosen, this job becomes the real test matrix:
+  #
+  #   strategy:
+  #     matrix:
+  #       os: [ubuntu-latest, macos-latest, windows-latest]
+  #   steps:
+  #     - run: <language> lint
+  #     - run: <language> unit tests
+  #     - run: integration tests for capture, edit, apply, wipe
+  #       (WSL is covered by the ubuntu runner in the apply tests)
+  #
+  # The secret shape corpus (CONTRIBUTING.md) is the redactor regression
+  # suite and must run in every integration job.
+  cli-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: "echo 'TODO: CLI tests land with the language decision'"

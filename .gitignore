@@ -1,0 +1,13 @@
+# Local state and env files are never committed.
+.env
+.env.*
+*.local
+
+# Build output, once the CLI exists.
+node_modules/
+dist/
+build/
+
+# Editor and OS noise.
+.DS_Store
+*.swp
