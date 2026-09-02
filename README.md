@@ -3,8 +3,8 @@
 A managed digital copy of an OpenCode config tree.
 
 [![License: MIT](https://img.shields.io/github/license/Neverdecel/OpenMirror)](LICENSE)
-[![docs](https://github.com/Neverdecel/OpenMirror/actions/workflows/docs.yml/badge.svg)](https://github.com/Neverdecel/OpenMirror/actions/workflows/docs.yml)
-[![security](https://github.com/Neverdecel/OpenMirror/actions/workflows/security.yml/badge.svg)](https://github.com/Neverdecel/OpenMirror/actions/workflows/security.yml)
+[![docs](https://img.shields.io/github/actions/workflow/status/Neverdecel/OpenMirror/docs.yml)](https://github.com/Neverdecel/OpenMirror/actions/workflows/docs.yml)
+[![security](https://img.shields.io/github/actions/workflow/status/Neverdecel/OpenMirror/security.yml)](https://github.com/Neverdecel/OpenMirror/actions/workflows/security.yml)
 
 > The machine is a place the copy is written.
 
@@ -46,7 +46,7 @@ Your config shouldn't belong to a platform. It belongs to you, and it should sur
 
 The whole product is three commands, and they are being built in public:
 
-```
+```text
 openmirror capture   machine -> copy   (secrets stripped to {env:NAME})
 openmirror edit      copy is the source of truth
 openmirror apply     copy -> machine   (first run prompts for env values)
