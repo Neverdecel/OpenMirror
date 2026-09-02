@@ -23,10 +23,10 @@ jobs:
           git tag "v${{ github.event.inputs.version }}"
       - name: manifest must exist before the first release
         run: |
-          if [[ ! -f relit.json ]]; then
-            echo "relit.json not found; the manifest floor lands with the CLI (ROADMAP.md v0.1)"
+          if [[ ! -f openmirror.json ]]; then
+            echo "openmirror.json not found; the manifest floor lands with the CLI (ROADMAP.md v0.1)"
           else
-            grep -q '"schemaVersion"' relit.json
+            grep -q '"schemaVersion"' openmirror.json
           fi
 
       # TODO: when the CLI exists (ROADMAP.md v0.1), this step becomes the

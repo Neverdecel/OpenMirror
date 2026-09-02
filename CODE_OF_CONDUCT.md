@@ -2,7 +2,7 @@
 
 ## Our standard
 
-Relit is built in public. Participants are expected to:
+OpenMirror is built in public. Participants are expected to:
 
 - Be respectful of differing viewpoints and experience levels.
 - Give and accept constructive feedback gracefully.

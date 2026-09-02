@@ -14,5 +14,5 @@ The commands run and their output. If a criterion cannot be verified yet, say so
 
 - [ ] No real credentials anywhere in the diff (gitleaks will check too)
 - [ ] No em dashes in prose
-- [ ] No new product nouns outside the Relit vocabulary
+- [ ] No new product nouns outside the OpenMirror vocabulary
 - [ ] Docs updated if behavior changed

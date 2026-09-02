@@ -1,6 +1,6 @@
-# Security policy for Relit
+# Security policy for OpenMirror
 
-Relit's product is trust. This policy states what is guaranteed, what is out of scope, and how to report a problem.
+OpenMirror's product is trust. This policy states what is guaranteed, what is out of scope, and how to report a problem.
 
 ## The guarantee
 
@@ -9,12 +9,12 @@ Committed copy files may only reference secrets as `{env:NAME}`. Concretely:
 - No secret shape ever appears in a committed copy file, in any revision of the store.
 - Capture rewrites live secret shapes into `{env:NAME}` references; it never stores the value.
 - Apply prompts for `{env:NAME}` values unset on the target and writes them only to the local env file.
-- Provider logins, API keys, MCP bearer tokens, `/connect` caches, and CLI session tokens never leave the machine that owns them. Relit has no code path that transmits them.
+- Provider logins, API keys, MCP bearer tokens, `/connect` caches, and CLI session tokens never leave the machine that owns them. OpenMirror has no code path that transmits them.
 
 ## How the guarantee is enforced
 
 - **Write-time redaction.** A secret is removed when a file enters the copy, so it cannot later appear in git history.
-- **Apply refusal.** Apply refuses a copy whose committed files still hold secret shapes. That is treated as a bug in Relit, not a user error.
+- **Apply refusal.** Apply refuses a copy whose committed files still hold secret shapes. That is treated as a bug in OpenMirror, not a user error.
 - **Open source.** The redactor, validator, and apply logic are public. The guarantee is a diff away, not a brochure.
 
 ## In scope

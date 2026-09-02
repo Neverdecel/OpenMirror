@@ -1,6 +1,6 @@
-# Contributing to Relit
+# Contributing to OpenMirror
 
-Relit is open source, built in public. The trust model is the product: the redactor, the validator, and the apply logic are all meant to be read.
+OpenMirror is open source, built in public. The trust model is the product: the redactor, the validator, and the apply logic are all meant to be read.
 
 ## Start with the contract
 
@@ -31,7 +31,7 @@ Small fixes (typos, docs, a new secret shape in the test corpus) do not need a p
 - No em dashes in prose. Not a joke.
 - No secrets in code, examples, or tests. Test values only.
 - Comments explain why, never what.
-- Language stays in the Relit vocabulary: copy, tree, apply, capture, machine, revision.
+- Language stays in the OpenMirror vocabulary: copy, tree, apply, capture, machine, revision.
 
 ## Code of conduct
 

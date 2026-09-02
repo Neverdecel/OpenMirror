@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# Contract checks for the Relit repository.
-# Enforces what CONTRIBUTING.md promises: no em dashes, Relit vocabulary,
+# Contract checks for the OpenMirror repository.
+# Enforces what CONTRIBUTING.md promises: no em dashes, OpenMirror vocabulary,
 # and no broken document references.
 set -uo pipefail
 
@@ -26,7 +26,8 @@ done < <(find . -name '*.md' -not -path './node_modules/*')
 
 echo "== banned product nouns =="
 while IFS= read -r f; do
-  if grep -Pq '\b(warehouse|Omarchy|platform engineer)\b' "$f"; then
+  # Relit is the former project name; it must not come back.
+  if grep -Piq '\b(warehouse|Omarchy|platform engineer|relit)\b' "$f"; then
     echo "banned product noun in $f"
     FAIL=1
   fi

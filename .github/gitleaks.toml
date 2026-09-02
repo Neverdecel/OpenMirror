@@ -1,9 +1,9 @@
-# Relit gitleaks configuration.
+# OpenMirror gitleaks configuration.
 # The project's core promise is that no secret shape ever lands in a
 # committed file. gitleaks enforces that on every push and pull request,
 # and a weekly job scans the full history.
 
-title = "Relit gitleaks configuration"
+title = "OpenMirror gitleaks configuration"
 
 [extend]
 useDefault = true

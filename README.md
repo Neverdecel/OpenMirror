@@ -1,4 +1,4 @@
-# Relit
+# OpenMirror
 
 A managed digital copy of an OpenCode config tree.
 
@@ -22,7 +22,7 @@ Three verbs. That's the whole product.
 2. **Edit** the copy as the source of truth.
 3. **Apply** it to the next box. Open OpenCode. Everything is already there.
 
-Capture flips the arrangement: from then on, Relit holds the copy and the disk is just a render of it. Direct edits on disk become drift, and drift is handled out loud, never silently merged.
+Capture flips the arrangement: from then on, OpenMirror holds the copy and the disk is just a render of it. Direct edits on disk become drift, and drift is handled out loud, never silently merged.
 
 ## The promise
 
@@ -32,7 +32,7 @@ That's not a vendor promise. The whole thing is open source, built in public: th
 
 ## The stance
 
-Relit is not a replacement for OpenCode, not a replacement for Git, not a forge, not a control plane. It's a copy manager. Git can carry the files; Relit is why the copy is trustworthy.
+OpenMirror is not a replacement for OpenCode, not a replacement for Git, not a forge, not a control plane. It's a copy manager. Git can carry the files; OpenMirror is why the copy is trustworthy.
 
 Your config shouldn't belong to a platform. It belongs to you, and it should survive your laptop.
 

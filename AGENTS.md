@@ -3,7 +3,7 @@
 ## What this repo is
 
 - **Docs-only, pre-code.** No CLI, no language, no dependencies. The CLI language is undecided (ROADMAP.md, "Decisions pending"). Do not invent code or pick a language; that decision is the first real design discussion.
-- **Product:** Relit, a managed digital copy of an OpenCode config tree. The contract: capture, edit, apply. Secrets may only appear in committed copy files as `{env:NAME}`.
+- **Product:** OpenMirror, a managed digital copy of an OpenCode config tree. The contract: capture, edit, apply. Secrets may only appear in committed copy files as `{env:NAME}`.
 - Git repo is initialized on `main`, nothing committed, no remote.
 
 ## Doc map (one canonical file per concern)
