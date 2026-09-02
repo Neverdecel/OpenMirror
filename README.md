@@ -58,11 +58,11 @@ Pre-code, by design. The contract is settled: acceptance criteria 1-9 in `ARCHIT
 
 ## Get involved
 
-- [ARCHITECTURE.md](ARCHITECTURE.md) — the spec and the acceptance criteria
-- [ROADMAP.md](ROADMAP.md) — what is decided and what is next
-- [CONTRIBUTING.md](CONTRIBUTING.md) — contract-first contribution guide
-- [Discussions](https://github.com/Neverdecel/OpenMirror/discussions) — product talk
-- [Issues](https://github.com/Neverdecel/OpenMirror/issues) — contract bugs and open questions
+- [ARCHITECTURE.md](ARCHITECTURE.md): the spec and the acceptance criteria
+- [ROADMAP.md](ROADMAP.md): what is decided and what is next
+- [CONTRIBUTING.md](CONTRIBUTING.md): contract-first contribution guide
+- [Discussions](https://github.com/Neverdecel/OpenMirror/discussions): product talk
+- [Issues](https://github.com/Neverdecel/OpenMirror/issues): contract bugs and open questions
 
 ## License
 
