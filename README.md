@@ -2,6 +2,12 @@
 
 A managed digital copy of an OpenCode config tree.
 
+[![License: MIT](https://img.shields.io/github/license/Neverdecel/OpenMirror)](LICENSE)
+[![docs](https://github.com/Neverdecel/OpenMirror/actions/workflows/docs.yml/badge.svg)](https://github.com/Neverdecel/OpenMirror/actions/workflows/docs.yml)
+[![security](https://github.com/Neverdecel/OpenMirror/actions/workflows/security.yml/badge.svg)](https://github.com/Neverdecel/OpenMirror/actions/workflows/security.yml)
+
+> The machine is a place the copy is written.
+
 You built something. Not the code you ship, not the prompts you paste, but the *other* thing: your OpenCode tree.
 
 Agents that know how you work. Skills that encode the moves you make every day. Commands that run your rituals. Rules that keep every session honest. That tree is the closest thing you have to an external memory of how you get things done.
@@ -36,4 +42,28 @@ OpenMirror is not a replacement for OpenCode, not a replacement for Git, not a f
 
 Your config shouldn't belong to a platform. It belongs to you, and it should survive your laptop.
 
-The full specification lives in `ARCHITECTURE.md`. The plan lives in `ROADMAP.md`. Both are open to contribution.
+## Quickstart
+
+The whole product is three commands, and they are being built in public:
+
+```
+openmirror capture   machine -> copy   (secrets stripped to {env:NAME})
+openmirror edit      copy is the source of truth
+openmirror apply     copy -> machine   (first run prompts for env values)
+```
+
+## Status
+
+Pre-code, by design. The contract is settled: acceptance criteria 1-9 in `ARCHITECTURE.md` are the definition of done, and the CLI language is the one open decision (`ROADMAP.md`). Everything ships in public, so the redactor, the validator, and the apply logic are auditable before they reach your machine.
+
+## Get involved
+
+- [ARCHITECTURE.md](ARCHITECTURE.md) — the spec and the acceptance criteria
+- [ROADMAP.md](ROADMAP.md) — what is decided and what is next
+- [CONTRIBUTING.md](CONTRIBUTING.md) — contract-first contribution guide
+- [Discussions](https://github.com/Neverdecel/OpenMirror/discussions) — product talk
+- [Issues](https://github.com/Neverdecel/OpenMirror/issues) — contract bugs and open questions
+
+## License
+
+MIT. Read it like the trust model: the redaction logic is the point of the project.
